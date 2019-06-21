@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Social Metrics</title>
+  <!-- Favicon -->
+  <link href="{% static 'img/brand/favicon.png' %}" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  {% include 'css.html' %}
+
+  {% block extra_css %}
+  {% endblock %}
+</head>
+
+<body>
+  {% include 'sidebar.html' %}
+  <!-- Main content -->
+  <div class="main-content">
+    {% include 'nav.html' %}
+
+    {% block content %}
+    {% endblock %}
+  </div>
+  {% include 'javascript.html' %}
+
+  {% block extra_js %}
+  {% endblock %}
+</body>
+
+</html>
