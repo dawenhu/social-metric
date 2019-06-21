@@ -25,7 +25,7 @@ SECRET_KEY = 'q44-0ew83de5+tmdau^h()rdd@&^o6sil(c0swm1&b*gsx_kir'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.224.45.214', 'localhost']
+ALLOWED_HOSTS = ['3.83.123.199', 'localhost']
 
 
 # Application definition
@@ -145,7 +145,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
