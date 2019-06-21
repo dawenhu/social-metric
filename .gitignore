@@ -1,6 +1,10 @@
 .local
 # Pipfile.lock
+
 social-metrics.pem
+accessKeys.csv
+dns-records.CSV
+
 pyenc/
 pyenv/
 **/*.swp
