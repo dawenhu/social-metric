@@ -18,7 +18,7 @@
                     <div class="row justify-content-md-center">
                         {% for provider in providers %}
                             <div class="col-sm text-md-center">
-                                <a href="{% url 'analytics:detail' provider.pk %}" class="icon icon-shape bg-{{ provider.color }} text-white rounded-circle shadow" data-toggle="tooltip" data-placement="bottom" title="{{ provider.name }}">
+                                <a href="{% url 'analytics:detail' provider.name %}" class="icon icon-shape bg-{{ provider.color }} text-white rounded-circle shadow" data-toggle="tooltip" data-placement="bottom" title="{{ provider.name }}">
                                     <i class="{{ provider.icon }}"></i>
                                 </a>
                             </div>

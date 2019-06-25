@@ -26,7 +26,7 @@ class AnalyticDetailView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        provider = get_object_or_404(SocialProvider, pk=kwargs.get('pk'))
+        provider = get_object_or_404(SocialProvider, name=kwargs.get('name'))
         user = self.request.user
         user.providers.add(provider)
         return context
