@@ -8,6 +8,7 @@ from providers.models import SocialProvider
 User = get_user_model()
 
 class AnalyticView(LoginRequiredMixin, TemplateView):
+
     template_name = 'analytics/providers.html'
 
     def get_context_data(self, **kwargs):
