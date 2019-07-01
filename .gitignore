@@ -2,6 +2,10 @@
 # Pipfile.lock
 
 social-metrics.pem
+www_patchdash_com.ca-bundle
+www_patchdash_com.crt
+www_patchdash_com.p7b
+
 accessKeys.csv
 dns-records.CSV
 
