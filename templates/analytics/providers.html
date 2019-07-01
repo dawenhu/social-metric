@@ -18,11 +18,12 @@
                     <div class="row justify-content-md-center">
                         {% for provider in providers %}
                             <div class="col-sm text-md-center">
-                                <a href="{% url 'analytics:detail' provider.name %}" class="icon icon-shape bg-{{ provider.color }} text-white rounded-circle shadow" data-toggle="tooltip" data-placement="bottom" title="{{ provider.name }}">
+                                <a href="{% if user in provider.user_set.all %}{% url 'analytics:detail' provider.name %}{% else %}{{ provider.get_oauth_url }}{% endif %}" class="icon icon-shape bg-{{ provider.color }} text-white rounded-circle shadow" data-toggle="tooltip" data-placement="bottom" title="{{ provider.name }}">
                                     <i class="{{ provider.icon }}"></i>
                                 </a>
                             </div>
                         {% endfor %}
+                        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
                     </div>
                 </div>
             </div>
