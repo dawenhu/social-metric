@@ -91,9 +91,14 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link" href="{% url 'analytics:overview' %}">
+            <!-- <a class="nav-link" href="{% url 'analytics:overview' %}">
                 <i class="ni ni-favourite-28 text-red"></i> Dashboard
-            </a>
+            </a> -->
+            {% for provider in menus %}
+                <a class="nav-link" href="{% url 'analytics:detail' provider.name %}">
+                    <i class="ni ni-notification-70 text-green"></i> {{ provider.name }}
+                </a>
+            {% endfor %}
             </li>
             <li class="nav-item">
             <a class="nav-link" href="{% url 'analytics:overview' %}">

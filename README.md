@@ -1,0 +1,2 @@
+ - celery beat -S redbeat.RedBeatScheduler -A social_metrics.celeryapp:app --loglevel=debug
+ - celery worker -Q analytic -A social_metrics.celeryapp:app -n metric_upload.%%h --loglevel=info

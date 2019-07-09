@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from kombu import Queue
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -157,7 +158,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 # Allauth Configurations
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
@@ -186,3 +187,16 @@ DEFAULT_FROM_EMAIL = 'warrior.coder999@gmail.com'
 
 AWS_ACCESS_KEY_ID = 'AKIAQ2ZQ23IQLISF26MG'
 AWS_SECRET_ACCESS_KEY = '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'
+
+
+CELERY_BROKER_URL = os.environ.get('CLOUDAMQP_URL') or os.environ.get("CELERY_BROKER_URL", 'amqp://localhost')
+# CELERYD_TASK_SOFT_TIME_LIMIT = 1000
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_BACKEND = os.getenv('REDIS_URL', 'redis://localhost:6379/0')
+CELERY_DEFAULT_QUEUE = 'default'
+CELERY_QUEUES = (
+    Queue('default'),
+    Queue('analytic'),
+)
+CELERY_CREATE_MISSING_QUEUES = True
+redbeat_redis_url = os.getenv('REDBEAT_REDIS_URL', CELERY_RESULT_BACKEND)

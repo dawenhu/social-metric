@@ -7,4 +7,3 @@ class User(AbstractUser):
     """
     User class
     """
-    providers = models.ManyToManyField('providers.SocialProvider', blank=True)

@@ -6,4 +6,5 @@ urlpatterns = [
     path('<str:name>', views.AnalyticDetailView.as_view(), name='detail'),
 
     path('code/<str:provider>/', views.analytic_auth_code_view, name='oauth-code'),
+    path('<str:provider>/<int:token_id>', views.analytic_page, name='analytic-page'),
 ]
