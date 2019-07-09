@@ -28,7 +28,7 @@ class SocialProvider(models.Model):
             endpoint = 'https://www.facebook.com/v3.3/dialog/oauth?'
             client_id = 638564016618730
             # redirect_uri = 'http://localhost:8000/analytics/code/facebook/'
-            'redirect_uri': 'https://www.patchdash.com/analytics/code/facebook/'
+            redirect_uri = 'https://www.patchdash.com/analytics/code/facebook/'
             response_type = 'code'
             state = self.name
             scope='instagram_basic,pages_show_list,instagram_manage_insights'
