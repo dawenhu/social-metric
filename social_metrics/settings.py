@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q44-0ew83de5+tmdau^h()rdd@&^o6sil(c0swm1&b*gsx_kir'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['54.91.114.213', 'localhost', 'patchdash.com']
 
