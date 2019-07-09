@@ -26,7 +26,7 @@ SECRET_KEY = 'q44-0ew83de5+tmdau^h()rdd@&^o6sil(c0swm1&b*gsx_kir'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.83.123.199', 'localhost', 'patchdash.com']
+ALLOWED_HOSTS = ['54.91.114.213', 'localhost', 'patchdash.com']
 
 
 # Application definition
