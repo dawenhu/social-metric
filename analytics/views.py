@@ -76,7 +76,7 @@ def analytic_auth_code_view(request, provider):
         params = {
             'client_id': '638564016618730',
             # 'redirect_uri': 'http://localhost:8000/analytics/code/facebook/',
-            'redirect_uri': 'https://www.patchdash.com/analytics/code/facebook/',
+            'redirect_uri': 'https://app.patchdash.com/analytics/code/facebook/',
             'client_secret': 'baa9b546e158b586dd60f334c314c2ac',
             'code': code,
             'scope': 'instagram_basic,pages_show_list,instagram_manage_insights'
